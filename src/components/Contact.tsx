@@ -413,7 +413,7 @@ const Contact = () => {
               {touched.message && errors.message && <p className="text-form-error text-sm mt-1">{errors.message}</p>}
             </div>
 
-            <Button type="submit" disabled={isSubmitting} className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 py-6 text-lg font-semibold transition-transform hover:scale-[1.02]">
+            <Button type="submit" disabled={isSubmitting} className="w-full bg-[#121315] text-white hover:bg-[#121315]/90 py-6 text-lg font-semibold transition-transform hover:scale-[1.02]">
               {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
