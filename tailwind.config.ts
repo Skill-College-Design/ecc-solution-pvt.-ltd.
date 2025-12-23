@@ -68,6 +68,7 @@ export default {
           dark: "hsl(var(--ecc-dark))",
           gray: "hsl(var(--ecc-gray))",
         },
+        "service-card": "hsl(var(--service-card))",
       },
       borderRadius: {
         lg: "var(--radius)",

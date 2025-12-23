@@ -44,7 +44,7 @@ const Services = () => {
 
         {/* Service Cards */}
         <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => <div key={index} className={cn("bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-primary-foreground/20 transition-all group hover:scale-105 opacity-0", cardsVisible && "animate-fade-in-up")} style={{
+          {services.map((service, index) => <div key={index} className={cn("bg-service-card backdrop-blur-sm rounded-2xl p-6 hover:bg-service-card/90 transition-all group hover:scale-105 opacity-0", cardsVisible && "animate-fade-in-up")} style={{
           animationDelay: `${index * 0.1}s`
         }}>
               <span className="text-5xl font-bold text-primary-foreground/30 group-hover:text-primary-foreground/50 transition-colors">
