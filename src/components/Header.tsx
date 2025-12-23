@@ -20,7 +20,7 @@ const Header = () => {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-xl">E</span>
             </div>
-            <span className="font-bold text-xl text-foreground">ECC SolutionsPvt. Ltd</span>
+            <span className="font-bold text-xl text-foreground">ECC Solutions Pvt. Ltd</span>
           </div>
 
           {/* Desktop Navigation */}
