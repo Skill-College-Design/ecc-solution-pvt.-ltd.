@@ -20,7 +20,7 @@ const Hero = () => {
       });
     }
   };
-  return <section id="home" className="min-h-screen pt-20 flex items-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen pt-20 flex items-center relative overflow-hidden bg-[#dee9fc]">
       {/* Decorative shapes */}
       <div className="absolute top-32 left-10 w-24 h-24 bg-ecc-green rounded-full opacity-80 blur-sm animate-pulse" />
       <div className="absolute top-48 left-32 w-16 h-16 bg-ecc-yellow rounded-full opacity-80 animate-pulse" style={{
