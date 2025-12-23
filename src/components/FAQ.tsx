@@ -40,7 +40,7 @@ const FAQ = () => {
   } = useScrollAnimation({
     threshold: 0.3
   });
-  return <section id="faq" className="py-20 bg-secondary">
+  return <section id="faq" className="py-20 bg-[#dee9fc]">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start bg-[#dee9fc]">
           {/* Left Content */}
