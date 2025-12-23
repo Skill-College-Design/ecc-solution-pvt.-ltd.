@@ -6,17 +6,17 @@ const stats = [
   {
     icon: Shield,
     title: "Legitimacy",
-    description: "Authorized and certified partner with verified credentials and official partnerships.",
+    description: "Single authorized entity ensures lawful, compliant, and auditable merchandise transactions.",
   },
   {
     icon: Eye,
     title: "Transparency",
-    description: "Clear communication, honest pricing, and full visibility into our processes.",
+    description: "Payments and invoices remain clear, verifiable, and officially traceable.",
   },
   {
     icon: Target,
     title: "Consistency",
-    description: "Reliable quality and timely delivery on every project, every time.",
+    description: "All materials strictly follow approved Skill.College brand standards.",
   },
 ];
 
