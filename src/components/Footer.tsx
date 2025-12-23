@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const scrollToSection = (id: string) => {
@@ -11,9 +10,7 @@ const Footer = () => {
       });
     }
   };
-  
-  return (
-    <footer className="py-12 bg-[#2a56b7]">
+  return <footer className="py-12 bg-[#2a56b7]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Company */}
@@ -24,9 +21,7 @@ const Footer = () => {
               </div>
               <span className="font-bold text-xl text-background">ECC Solutions Pvt. Ltd.</span>
             </div>
-            <p className="text-background/70 text-sm">
-              Providing trusted financial solutions with transparency and excellence.
-            </p>
+            <p className="text-background/70 text">Exclusive authorized partner for Skill.College brand products.</p>
           </div>
 
           {/* Navigation */}
@@ -89,8 +84,6 @@ const Footer = () => {
           © {currentYear} ECC Solutions Pvt. Ltd. All rights reserved.
         </p>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
