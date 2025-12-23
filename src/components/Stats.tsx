@@ -1,4 +1,6 @@
 import { Shield, Eye, Target } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 
 const stats = [
   {
@@ -19,20 +21,33 @@ const stats = [
 ];
 
 const Stats = () => {
+  const { ref: headingRef, isVisible: headingVisible } = useScrollAnimation();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground mb-16">
+        <h2
+          ref={headingRef}
+          className={cn(
+            "text-3xl md:text-4xl lg:text-5xl font-bold text-center text-foreground mb-16 opacity-0",
+            headingVisible && "animate-fade-in-up"
+          )}
+        >
           Strength that speaks for itself
         </h2>
 
         {/* Stats Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-8 text-center border border-border hover:shadow-lg transition-shadow"
+              className={cn(
+                "bg-card rounded-2xl p-8 text-center border border-border hover:shadow-lg transition-all hover:scale-105 opacity-0",
+                cardsVisible && "animate-fade-in-up"
+              )}
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
                 <stat.icon className="w-8 h-8 text-primary" />

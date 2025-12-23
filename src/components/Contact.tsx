@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -15,6 +17,8 @@ const Contact = () => {
     phone: "",
     message: "",
   });
+
+  const { ref, isVisible } = useScrollAnimation();
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -65,12 +69,24 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-primary">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-primary-foreground mb-12">
+        <div ref={ref} className="max-w-2xl mx-auto">
+          <h2
+            className={cn(
+              "text-3xl md:text-4xl lg:text-5xl font-bold text-center text-primary-foreground mb-12 opacity-0",
+              isVisible && "animate-fade-in-up"
+            )}
+          >
             Get in Touch
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className={cn(
+              "space-y-6 opacity-0",
+              isVisible && "animate-fade-in-up"
+            )}
+            style={{ animationDelay: "0.2s" }}
+          >
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="firstName" className="block text-primary-foreground mb-2 font-medium">
@@ -82,7 +98,7 @@ const Contact = () => {
                   value={formData.firstName}
                   onChange={handleChange}
                   required
-                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
+                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50"
                   placeholder="John"
                 />
               </div>
@@ -96,7 +112,7 @@ const Contact = () => {
                   value={formData.lastName}
                   onChange={handleChange}
                   required
-                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
+                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50"
                   placeholder="Doe"
                 />
               </div>
@@ -114,7 +130,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
+                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50"
                   placeholder="john@example.com"
                 />
               </div>
@@ -128,7 +144,7 @@ const Contact = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
+                  className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50"
                   placeholder="+1 (234) 567-8900"
                 />
               </div>
@@ -145,7 +161,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 resize-none"
+                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 resize-none focus:ring-primary-foreground/50"
                 placeholder="Tell us about your project..."
               />
             </div>
@@ -153,7 +169,7 @@ const Contact = () => {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 py-6 text-lg font-semibold"
+              className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 py-6 text-lg font-semibold transition-transform hover:scale-[1.02]"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </Button>

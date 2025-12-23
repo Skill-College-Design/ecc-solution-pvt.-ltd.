@@ -4,6 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 
 const faqs = [
   {
@@ -29,18 +31,32 @@ const faqs = [
 ];
 
 const FAQ = () => {
+  const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation();
+  const { ref: imageRef, isVisible: imageVisible } = useScrollAnimation({ threshold: 0.3 });
+
   return (
     <section id="faq" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Content */}
-          <div>
+          <div ref={contentRef}>
             {/* Badge */}
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            <span
+              className={cn(
+                "inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6 opacity-0",
+                contentVisible && "animate-fade-in-up"
+              )}
+            >
               FAQ
             </span>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8">
+            <h2
+              className={cn(
+                "text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-8 opacity-0",
+                contentVisible && "animate-fade-in-up"
+              )}
+              style={{ animationDelay: "0.1s" }}
+            >
               You're probably wondering...
             </h2>
 
@@ -50,7 +66,11 @@ const FAQ = () => {
                 <AccordionItem
                   key={index}
                   value={`item-${index}`}
-                  className="bg-card rounded-lg px-6 border border-border"
+                  className={cn(
+                    "bg-card rounded-lg px-6 border border-border opacity-0",
+                    contentVisible && "animate-fade-in-left"
+                  )}
+                  style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                 >
                   <AccordionTrigger className="text-left font-medium text-foreground hover:no-underline">
                     {faq.question}
@@ -64,7 +84,13 @@ const FAQ = () => {
           </div>
 
           {/* Right Content - Image placeholder */}
-          <div className="hidden lg:flex justify-center items-center">
+          <div
+            ref={imageRef}
+            className={cn(
+              "hidden lg:flex justify-center items-center opacity-0",
+              imageVisible && "animate-fade-in-right"
+            )}
+          >
             <div className="w-full max-w-sm aspect-square bg-gradient-to-br from-primary/20 to-ecc-yellow/20 rounded-3xl flex items-center justify-center">
               <div className="text-center space-y-4 p-8">
                 <div className="w-24 h-24 mx-auto bg-primary/30 rounded-full flex items-center justify-center">

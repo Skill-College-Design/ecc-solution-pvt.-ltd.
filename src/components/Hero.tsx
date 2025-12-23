@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
+  const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation();
+  const { ref: imageRef, isVisible: imageVisible } = useScrollAnimation({ threshold: 0.2 });
+
   const scrollToServices = () => {
     const element = document.getElementById("services");
     if (element) {
@@ -11,15 +16,21 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen pt-20 flex items-center relative overflow-hidden">
       {/* Decorative shapes */}
-      <div className="absolute top-32 left-10 w-24 h-24 bg-ecc-green rounded-full opacity-80 blur-sm" />
-      <div className="absolute top-48 left-32 w-16 h-16 bg-ecc-yellow rounded-full opacity-80" />
-      <div className="absolute top-64 right-20 w-20 h-20 bg-ecc-light-blue rounded-full opacity-80" />
-      <div className="absolute bottom-32 left-20 w-12 h-12 bg-primary rounded-full opacity-60" />
+      <div className="absolute top-32 left-10 w-24 h-24 bg-ecc-green rounded-full opacity-80 blur-sm animate-pulse" />
+      <div className="absolute top-48 left-32 w-16 h-16 bg-ecc-yellow rounded-full opacity-80 animate-pulse" style={{ animationDelay: "0.5s" }} />
+      <div className="absolute top-64 right-20 w-20 h-20 bg-ecc-light-blue rounded-full opacity-80 animate-pulse" style={{ animationDelay: "1s" }} />
+      <div className="absolute bottom-32 left-20 w-12 h-12 bg-primary rounded-full opacity-60 animate-pulse" style={{ animationDelay: "1.5s" }} />
 
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6 animate-fade-in">
+          <div
+            ref={contentRef}
+            className={cn(
+              "space-y-6 opacity-0",
+              contentVisible && "animate-fade-in-up"
+            )}
+          >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
               Official Merchandise & Branding Partner for{" "}
               <span className="text-primary">Skill.College</span>
@@ -30,14 +41,20 @@ const Hero = () => {
             <Button
               onClick={scrollToServices}
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg transition-transform hover:scale-105"
             >
               Explore
             </Button>
           </div>
 
           {/* Right Content - Illustration placeholder */}
-          <div className="relative flex justify-center items-center">
+          <div
+            ref={imageRef}
+            className={cn(
+              "relative flex justify-center items-center opacity-0",
+              imageVisible && "animate-fade-in-right"
+            )}
+          >
             <div className="w-full max-w-md aspect-square bg-gradient-to-br from-primary/20 to-ecc-green/20 rounded-3xl flex items-center justify-center">
               <div className="text-center space-y-4 p-8">
                 <div className="w-32 h-32 mx-auto bg-primary/30 rounded-2xl flex items-center justify-center">
