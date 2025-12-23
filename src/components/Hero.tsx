@@ -41,7 +41,7 @@ const Hero = () => {
               Official Merchandise & Branding Partner for{" "}
               <span className="text-primary">Skill.College</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-lg">ECC Solutions Pvt. Ltd. is the authorized provider of all branding materials, official merchandise, and corporate goodies for the Skill.College brand.</p>
+            <p className="text-lg text-muted-foreground max-w-lg font-bold">ECC Solutions Pvt. Ltd. is the authorized provider of all branding materials, official merchandise, and corporate goodies for the Skill.College brand.</p>
             <Button onClick={scrollToServices} size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg transition-transform hover:scale-105">
               Explore
             </Button>
