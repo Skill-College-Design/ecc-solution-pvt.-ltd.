@@ -2,20 +2,20 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { cn } from "@/lib/utils";
 const services = [{
   number: "01",
-  title: "Office Merchandise",
-  description: "Custom branded office supplies, stationery, and desk accessories for your team."
+  title: "Official Merchandise",
+  description: "Premium quality branded merchandise including apparel, accessories, and promotional items exclusively for the Skill.College brand."
 }, {
   number: "02",
-  title: "Corporate Signage",
-  description: "Professional signage solutions including banners, displays, and wayfinding systems."
+  title: "Corporate Goodies",
+  description: "Curated corporate gift sets and welcome kits for events, onboarding, and celebrations."
 }, {
   number: "03",
   title: "Branding Materials",
-  description: "Complete brand identity packages including logos, business cards, and letterheads."
+  description: "Complete branding collaterals including banners, standees, signage, and print materials."
 }, {
   number: "04",
   title: "Marketing Collaterals",
-  description: "Promotional materials, brochures, flyers, and digital marketing assets."
+  description: "High-quality marketing materials designed to elevate brand presence and recognition."
 }];
 const Services = () => {
   const {
