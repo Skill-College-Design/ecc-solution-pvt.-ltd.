@@ -50,13 +50,13 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-background text-lg">Contact Us</h3>
             <div className="space-y-3">
-              <a href="mailto:info@eccsolutions.com" className="flex items-center gap-2 text-background/70 hover:text-[#FFCA28] transition-colors">
+              <a href="mailto:ecc.rajkot@gmail.com" className="flex items-center gap-2 text-background/70 hover:text-[#FFCA28] transition-colors">
                 <Mail className="w-4 h-4" />
-                <span>info@eccsolutions.com</span>
+                <span>ecc.rajkot@gmail.com</span>
               </a>
-              <a href="tel:+911234567890" className="flex items-center gap-2 text-background/70 hover:text-[#FFCA28] transition-colors">
+              <a href="tel:+919909990741" className="flex items-center gap-2 text-background/70 hover:text-[#FFCA28] transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>+91 123 456 7890</span>
+                <span>+91 990 9990 741</span>
               </a>
             </div>
           </div>
@@ -67,10 +67,10 @@ const Footer = () => {
             <div className="flex items-start gap-2 text-background/70">
               <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
               <p>
-                123 Business Park,<br />
-                Financial District,<br />
-                Mumbai, Maharashtra 400001,<br />
-                India
+                203 Krishna Con-Arch Complex,<br />
+                Opp. Modern Fast Food,<br />
+                University Road,<br />
+                Rajkot - 360005, India
               </p>
             </div>
           </div>
