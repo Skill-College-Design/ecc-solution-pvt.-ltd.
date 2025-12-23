@@ -8,18 +8,21 @@ const stats = [
     title: "Legitimacy",
     description: "Single authorized entity ensures lawful, compliant, and auditable merchandise transactions.",
     bgColor: "bg-[#9EDCAB]",
+    iconColor: "text-[#226C35]",
   },
   {
     icon: Eye,
     title: "Transparency",
     description: "Payments and invoices remain clear, verifiable, and officially traceable.",
     bgColor: "bg-[#C3D6FA]",
+    iconColor: "text-[#2A58B8]",
   },
   {
     icon: Target,
     title: "Consistency",
     description: "All materials strictly follow approved Skill.College brand standards.",
     bgColor: "bg-[#FFF0C2]",
+    iconColor: "text-[#DB8C0F]",
   },
 ];
 
@@ -53,8 +56,8 @@ const Stats = () => {
               )}
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-                <stat.icon className="w-8 h-8 text-primary" />
+              <div className="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center">
+                <stat.icon className={cn("w-8 h-8", stat.iconColor)} />
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {stat.title}
