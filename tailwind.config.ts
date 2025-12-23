@@ -69,6 +69,13 @@ export default {
           gray: "hsl(var(--ecc-gray))",
         },
         "service-card": "hsl(var(--service-card))",
+        form: {
+          title: "hsl(var(--form-title))",
+          "input-border": "hsl(var(--form-input-border) / 0.2)",
+          "input-hover": "hsl(var(--form-input-hover))",
+          placeholder: "hsl(var(--form-placeholder))",
+          error: "hsl(var(--form-error))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

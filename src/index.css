@@ -46,6 +46,13 @@
     --ecc-dark: 220 15% 20%;
     --ecc-gray: 220 13% 46%;
     --service-card: 218 64% 44%;
+    
+    /* Form colors */
+    --form-title: 220 9% 8%;
+    --form-input-border: 220 9% 8%;
+    --form-input-hover: 218 64% 44%;
+    --form-placeholder: 220 7% 34%;
+    --form-error: 0 100% 27%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

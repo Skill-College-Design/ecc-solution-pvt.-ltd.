@@ -185,7 +185,7 @@ const Contact = () => {
   return <section id="contact" className="py-20 bg-[#fdefc9]">
       <div className="container mx-auto px-4">
         <div ref={ref} className="max-w-2xl mx-auto">
-          <h2 className={cn("text-3xl md:text-4xl lg:text-5xl font-bold text-center text-primary-foreground mb-12 opacity-0", isVisible && "animate-fade-in-up")}>
+          <h2 className={cn("text-3xl md:text-4xl lg:text-5xl font-bold text-center text-form-title mb-12 opacity-0", isVisible && "animate-fade-in-up")}>
             Get in Touch
           </h2>
 
@@ -194,44 +194,44 @@ const Contact = () => {
         }}>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="firstName" className="block text-primary-foreground mb-2 font-medium">
-                  First Name <span className="text-red-400">*</span>
+                <label htmlFor="firstName" className="block text-form-title mb-2 font-medium">
+                  First Name <span className="text-form-error">*</span>
                 </label>
-                <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} onBlur={() => handleBlur("firstName")} className={cn("bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50", touched.firstName && errors.firstName && "border-red-400")} placeholder="Enter your first name" />
-                {touched.firstName && errors.firstName && <p className="text-red-400 text-sm mt-1">{errors.firstName}</p>}
+                <Input id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} onBlur={() => handleBlur("firstName")} className={cn("bg-white border-form-input-border text-form-title placeholder:text-form-placeholder focus:ring-form-input-hover hover:border-form-input-hover", touched.firstName && errors.firstName && "border-form-error")} placeholder="Enter your first name" />
+                {touched.firstName && errors.firstName && <p className="text-form-error text-sm mt-1">{errors.firstName}</p>}
               </div>
               <div>
-                <label htmlFor="lastName" className="block text-primary-foreground mb-2 font-medium">
-                  Last Name <span className="text-red-400">*</span>
+                <label htmlFor="lastName" className="block text-form-title mb-2 font-medium">
+                  Last Name <span className="text-form-error">*</span>
                 </label>
-                <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} onBlur={() => handleBlur("lastName")} className={cn("bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50", touched.lastName && errors.lastName && "border-red-400")} placeholder="Enter your last name" />
-                {touched.lastName && errors.lastName && <p className="text-red-400 text-sm mt-1">{errors.lastName}</p>}
+                <Input id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} onBlur={() => handleBlur("lastName")} className={cn("bg-white border-form-input-border text-form-title placeholder:text-form-placeholder focus:ring-form-input-hover hover:border-form-input-hover", touched.lastName && errors.lastName && "border-form-error")} placeholder="Enter your last name" />
+                {touched.lastName && errors.lastName && <p className="text-form-error text-sm mt-1">{errors.lastName}</p>}
               </div>
             </div>
 
             <div>
-              <label htmlFor="companyName" className="block text-primary-foreground mb-2 font-medium">
-                Company / Organization Name <span className="text-red-400">*</span>
+              <label htmlFor="companyName" className="block text-form-title mb-2 font-medium">
+                Company / Organization Name <span className="text-form-error">*</span>
               </label>
-              <Input id="companyName" name="companyName" value={formData.companyName} onChange={handleChange} onBlur={() => handleBlur("companyName")} className={cn("bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50", touched.companyName && errors.companyName && "border-red-400")} placeholder="Enter your company name" />
-              {touched.companyName && errors.companyName && <p className="text-red-400 text-sm mt-1">{errors.companyName}</p>}
+              <Input id="companyName" name="companyName" value={formData.companyName} onChange={handleChange} onBlur={() => handleBlur("companyName")} className={cn("bg-white border-form-input-border text-form-title placeholder:text-form-placeholder focus:ring-form-input-hover hover:border-form-input-hover", touched.companyName && errors.companyName && "border-form-error")} placeholder="Enter your company name" />
+              {touched.companyName && errors.companyName && <p className="text-form-error text-sm mt-1">{errors.companyName}</p>}
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="email" className="block text-primary-foreground mb-2 font-medium">
-                  Email <span className="text-red-400">*</span>
+                <label htmlFor="email" className="block text-form-title mb-2 font-medium">
+                  Email <span className="text-form-error">*</span>
                 </label>
-                <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} onBlur={() => handleBlur("email")} className={cn("bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50", touched.email && errors.email && "border-red-400")} placeholder="Enter your email" />
-                {touched.email && errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
+                <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} onBlur={() => handleBlur("email")} className={cn("bg-white border-form-input-border text-form-title placeholder:text-form-placeholder focus:ring-form-input-hover hover:border-form-input-hover", touched.email && errors.email && "border-form-error")} placeholder="Enter your email" />
+                {touched.email && errors.email && <p className="text-form-error text-sm mt-1">{errors.email}</p>}
               </div>
               <div>
-                <label htmlFor="phone" className="block text-primary-foreground mb-2 font-medium">
-                  Phone <span className="text-red-400">*</span>
+                <label htmlFor="phone" className="block text-form-title mb-2 font-medium">
+                  Phone <span className="text-form-error">*</span>
                 </label>
                 <div className="flex gap-2">
                   <Select value={countryCode} onValueChange={setCountryCode}>
-                    <SelectTrigger className="w-[100px] bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
+                    <SelectTrigger className="w-[100px] bg-white border-form-input-border text-form-title hover:border-form-input-hover">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent className="bg-background border-border">
@@ -240,18 +240,18 @@ const Contact = () => {
                         </SelectItem>)}
                     </SelectContent>
                   </Select>
-                  <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} onBlur={() => handleBlur("phone")} className={cn("flex-1 bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50", touched.phone && errors.phone && "border-red-400")} placeholder="Enter your phone number" />
+                  <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} onBlur={() => handleBlur("phone")} className={cn("flex-1 bg-white border-form-input-border text-form-title placeholder:text-form-placeholder focus:ring-form-input-hover hover:border-form-input-hover", touched.phone && errors.phone && "border-form-error")} placeholder="Enter your phone number" />
                 </div>
-                {touched.phone && errors.phone && <p className="text-red-400 text-sm mt-1">{errors.phone}</p>}
+                {touched.phone && errors.phone && <p className="text-form-error text-sm mt-1">{errors.phone}</p>}
               </div>
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-primary-foreground mb-2 font-medium">
-                How can we help? <span className="text-red-400">*</span>
+              <label htmlFor="message" className="block text-form-title mb-2 font-medium">
+                How can we help? <span className="text-form-error">*</span>
               </label>
-              <Textarea id="message" name="message" value={formData.message} onChange={handleChange} onBlur={() => handleBlur("message")} rows={5} className={cn("bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 resize-none focus:ring-primary-foreground/50", touched.message && errors.message && "border-red-400")} placeholder="Enter your message here" />
-              {touched.message && errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
+              <Textarea id="message" name="message" value={formData.message} onChange={handleChange} onBlur={() => handleBlur("message")} rows={5} className={cn("bg-white border-form-input-border text-form-title placeholder:text-form-placeholder resize-none focus:ring-form-input-hover hover:border-form-input-hover", touched.message && errors.message && "border-form-error")} placeholder="Enter your message here" />
+              {touched.message && errors.message && <p className="text-form-error text-sm mt-1">{errors.message}</p>}
             </div>
 
             <Button type="submit" disabled={isSubmitting} className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90 py-6 text-lg font-semibold transition-transform hover:scale-[1.02]">
