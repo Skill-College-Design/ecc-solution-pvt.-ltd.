@@ -9,24 +9,40 @@ import { cn } from "@/lib/utils";
 
 const faqs = [
   {
-    question: "What services does ECC Solutions provide?",
-    answer: "ECC Solutions provides comprehensive branding and merchandise solutions including office merchandise, corporate signage, branding materials, and marketing collaterals. We work with businesses of all sizes to create customized solutions that enhance their brand identity.",
+    question: "What is ECC Solutions Pvt. Ltd.?",
+    answer: "ECC Solutions Pvt. Ltd. is the officially authorized partner for Skill.College merchandise and branding materials.",
   },
   {
-    question: "How do I place an order for merchandise?",
-    answer: "You can place an order by contacting us through our website's contact form or reaching out to our sales team directly. We'll discuss your requirements, provide a quote, and guide you through the ordering process.",
+    question: "Is Skill.College owned by ECC Solutions Pvt. Ltd.?",
+    answer: "No. Skill.College is a brand owned and operated by Drona Education Pvt. Ltd.",
   },
   {
-    question: "What is the typical turnaround time for orders?",
-    answer: "Turnaround times vary depending on the complexity and quantity of your order. Standard orders typically take 2-3 weeks, while custom or large orders may take 4-6 weeks. We'll provide you with an accurate timeline during the quoting process.",
+    question: "Why are payments collected by ECC Solutions Pvt. Ltd.?",
+    answer: "ECC Solutions Pvt. Ltd. is responsible for producing and supplying official goods and therefore legally handles payments and invoicing.",
   },
   {
-    question: "Do you offer customization options?",
-    answer: "Yes! We specialize in customization. Whether you need custom logos, specific colors, or unique designs, our team can accommodate your requirements to ensure your merchandise perfectly represents your brand.",
+    question: "Are invoices issued by ECC Solutions Pvt. Ltd. valid?",
+    answer: "Yes. All invoices and GST bills issued by ECC Solutions Pvt. Ltd. are official and compliant.",
   },
   {
-    question: "What is your minimum order quantity?",
-    answer: "Minimum order quantities vary by product type. Some items have no minimum, while others may require a minimum order. Contact us with your specific requirements, and we'll provide detailed information.",
+    question: "Is any other entity authorized to sell Skill.College merchandise?",
+    answer: "No. ECC Solutions Pvt. Ltd. is the sole authorized partner for official merchandise and branding materials.",
+  },
+  {
+    question: "Who should be contacted for merchandise-related queries?",
+    answer: "All merchandise and branding-related queries should be directed to ECC Solutions Pvt. Ltd.",
+  },
+  {
+    question: "Is this payment official and valid?",
+    answer: "Yes. All merchandise-related payments are legally routed through ECC Solutions Pvt. Ltd.",
+  },
+  {
+    question: "Is this page created for verification purposes?",
+    answer: "Yes. This page exists to clarify authorization, payment legitimacy, and brand relationships.",
+  },
+  {
+    question: "Can this page be used for bank or audit verification?",
+    answer: "Yes. The information provided here is intended for verification by banks, institutions, and auditors.",
   },
 ];
 
