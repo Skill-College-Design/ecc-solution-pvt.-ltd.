@@ -7,16 +7,19 @@ const stats = [
     icon: Shield,
     title: "Legitimacy",
     description: "Single authorized entity ensures lawful, compliant, and auditable merchandise transactions.",
+    bgColor: "bg-[#9EDCAB]",
   },
   {
     icon: Eye,
     title: "Transparency",
     description: "Payments and invoices remain clear, verifiable, and officially traceable.",
+    bgColor: "bg-[#C3D6FA]",
   },
   {
     icon: Target,
     title: "Consistency",
     description: "All materials strictly follow approved Skill.College brand standards.",
+    bgColor: "bg-[#FFF0C2]",
   },
 ];
 
@@ -44,7 +47,8 @@ const Stats = () => {
             <div
               key={index}
               className={cn(
-                "bg-card rounded-2xl p-8 text-center border border-border hover:shadow-lg transition-all hover:scale-105 opacity-0",
+                "rounded-2xl p-8 text-center border border-border hover:shadow-lg transition-all hover:scale-105 opacity-0",
+                stat.bgColor,
                 cardsVisible && "animate-fade-in-up"
               )}
               style={{ animationDelay: `${index * 0.15}s` }}
