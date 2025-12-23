@@ -13,6 +13,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    companyName: "",
     email: "",
     phone: "",
     message: "",
@@ -35,8 +36,9 @@ const Contact = () => {
       const { error } = await supabase.from("contacts").insert({
         first_name: formData.firstName,
         last_name: formData.lastName,
+        company_name: formData.companyName,
         email: formData.email,
-        phone: formData.phone || null,
+        phone: formData.phone,
         message: formData.message,
       });
 
@@ -50,6 +52,7 @@ const Contact = () => {
       setFormData({
         firstName: "",
         lastName: "",
+        companyName: "",
         email: "",
         phone: "",
         message: "",
@@ -118,6 +121,21 @@ const Contact = () => {
               </div>
             </div>
 
+            <div>
+              <label htmlFor="companyName" className="block text-primary-foreground mb-2 font-medium">
+                Company / Organization Name
+              </label>
+              <Input
+                id="companyName"
+                name="companyName"
+                value={formData.companyName}
+                onChange={handleChange}
+                required
+                className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50"
+                placeholder="Acme Corporation"
+              />
+            </div>
+
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="email" className="block text-primary-foreground mb-2 font-medium">
@@ -144,6 +162,7 @@ const Contact = () => {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
+                  required
                   className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:ring-primary-foreground/50"
                   placeholder="+1 (234) 567-8900"
                 />
