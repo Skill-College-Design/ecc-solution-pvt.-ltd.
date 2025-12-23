@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import PrivacyPolicyDialog from "./PrivacyPolicyDialog";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const scrollToSection = (id: string) => {
@@ -40,9 +41,13 @@ const Footer = () => {
               <button onClick={() => scrollToSection("contact")} className="text-background/70 hover:text-[#FFCA28] transition-colors font-medium text-left">
                 Contact
               </button>
-              <Link to="/privacy-policy" className="text-background/70 hover:text-[#FFCA28] transition-colors font-medium">
-                Privacy Policy
-              </Link>
+              <PrivacyPolicyDialog
+                trigger={
+                  <button className="text-background/70 hover:text-[#FFCA28] transition-colors font-medium text-left">
+                    Privacy Policy
+                  </button>
+                }
+              />
             </nav>
           </div>
 
