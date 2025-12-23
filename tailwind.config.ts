@@ -76,6 +76,7 @@ export default {
           placeholder: "hsl(var(--form-placeholder))",
           error: "hsl(var(--form-error))",
         },
+        "select-hover": "hsl(var(--select-hover))",
       },
       borderRadius: {
         lg: "var(--radius)",
