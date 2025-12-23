@@ -5,7 +5,7 @@ const Partnership = () => {
     ref,
     isVisible
   } = useScrollAnimation();
-  return <section className="py-20 bg-secondary">
+  return <section className="py-20 bg-[#c2d5fa]">
       <div className="container mx-auto px-4">
         <div ref={ref} className={cn("text-center max-w-3xl mx-auto opacity-0", isVisible && "animate-fade-in-up")}>
           {/* Badge */}

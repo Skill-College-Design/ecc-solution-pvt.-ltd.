@@ -11,19 +11,19 @@ const About = () => {
   } = useScrollAnimation({
     threshold: 0.3
   });
-  return <section id="about" className="py-20 bg-background">
+  return <section id="about" className="py-20 bg-[#ffc929]">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div ref={contentRef} className={cn("space-y-6 opacity-0", contentVisible && "animate-fade-in-left")}>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">All about
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-inherit text-[#131416]">All about
 ECC Solutions Pvt. Ltd.</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">ECC Solutions Pvt. Ltd. is a professional corporate solutions company specializing in brand merchandise and promotional materials.
+            <p className="text-lg leading-relaxed text-[#131416]">ECC Solutions Pvt. Ltd. is a professional corporate solutions company specializing in brand merchandise and promotional materials.
 
  
 
 We are the exclusive authorized partner for Skill.College brand products.</p>
-            <p className="text-muted-foreground text-lg leading-relaxed">In partnership with Drona Education Pvt. Ltd., we ensure that all Skill.College branded materials meet the highest standards of quality and brand consistency.</p>
+            <p className="text-lg leading-relaxed text-[#131416]">In partnership with Drona Education Pvt. Ltd., we ensure that all Skill.College branded materials meet the highest standards of quality and brand consistency.</p>
           </div>
 
           {/* Right Content - Clover Graphic */}
